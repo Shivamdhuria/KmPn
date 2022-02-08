@@ -8,12 +8,15 @@ buildscript {
         gradlePluginPortal()
         maven(uri("https://plugins.gradle.org/m2/")) // For kotlinter-gradle
     }
-
+    val hilt_version = "2.38.1"
     dependencies {
         // keeping this here to allow AS to automatically update
         classpath("com.android.tools.build:gradle:7.0.0")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
         classpath("org.jetbrains.kotlin:kotlin-serialization:${kotlinVersion}")
+
+        classpath( "com.google.dagger:hilt-android-gradle-plugin:$hilt_version")
+
 
         with(Deps.Gradle) {
             classpath(sqlDelight)
