@@ -80,10 +80,10 @@ kotlin {
                 implementation(coroutineExtensions)
             }
 
-            with(Deps.Koin) {
-                api(core)
-                api(test)
-            }
+//            with(Deps.Koin) {
+//                api(core)
+//                api(test)
+//            }
 
             with(Deps.Log) {
                 api(kermit)
