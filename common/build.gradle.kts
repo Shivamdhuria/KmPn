@@ -36,15 +36,15 @@ kotlin {
     }
     iosTarget("iOS") {}
 
-    val sdkName: String? = System.getenv("SDK_NAME")
-    val isWatchOSDevice = sdkName.orEmpty().startsWith("watchos")
-    if (isWatchOSDevice) {
-        watchosArm64("watch")
-    } else {
-        watchosX64("watch")
-    }
-
-    macosX64("macOS")
+//    val sdkName: String? = System.getenv("SDK_NAME")
+//    val isWatchOSDevice = sdkName.orEmpty().startsWith("watchos")
+//    if (isWatchOSDevice) {
+//        watchosArm64("watch")
+//    } else {
+//        watchosX64("watch")
+//    }
+//
+//    macosX64("macOS")
     android()
     jvm()
 
@@ -54,10 +54,10 @@ kotlin {
         homepage = "https://github.com/joreilly/PeopleInSpace"
     }
 
-    js(IR) {
-        useCommonJs()
-        browser()
-    }
+//    js(IR) {
+//        useCommonJs()
+//        browser()
+//    }
 
     sourceSets {
         sourceSets["commonMain"].dependencies {
@@ -117,19 +117,19 @@ kotlin {
         sourceSets["iOSTest"].dependencies {
         }
 
-        sourceSets["watchMain"].dependencies {
-            implementation(Deps.Ktor.clientIos)
-            implementation(Deps.SqlDelight.nativeDriver)
-        }
-
-        sourceSets["macOSMain"].dependencies {
-            implementation(Deps.Ktor.clientIos)
-            implementation(Deps.SqlDelight.nativeDriverMacos)
-        }
-
-        sourceSets["jsMain"].dependencies {
-            implementation(Deps.Ktor.clientJs)
-        }
+//        sourceSets["watchMain"].dependencies {
+//            implementation(Deps.Ktor.clientIos)
+//            implementation(Deps.SqlDelight.nativeDriver)
+//        }
+//
+//        sourceSets["macOSMain"].dependencies {
+//            implementation(Deps.Ktor.clientIos)
+//            implementation(Deps.SqlDelight.nativeDriverMacos)
+//        }
+//
+//        sourceSets["jsMain"].dependencies {
+//            implementation(Deps.Ktor.clientJs)
+//        }
     }
 }
 
